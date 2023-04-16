@@ -4,7 +4,7 @@
 
 %option noyywrap
 
-T_RES        (procedure|array|node|if|else|case|endcase|while|do|endwhile|repeat|until|loop|forever|for|endfor|input|output|call|return|stop|end|floor|ceil|log|goto)
+T_RES        (procedure|array|node|if|then|elseif|else|case|endcase|while|do|endwhile|repeat|until|loop|forever|for|endfor|input|output|call|return|stop|end|floor|ceil|log|goto)
 T_UnaryOp    (not)
 T_ExpoOp     (\^)
 T_MDOp       (\*|\/|mod)

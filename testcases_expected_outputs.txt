@@ -147,11 +147,11 @@ Assignment Operator: =
 Identifier: expression
 Keyword: if
 Identifier: cond1
-Identifier: then
+Keyword: then
 Identifier: S1
-Identifier: elseif
+Keyword: elseif
 Identifier: cond2
-Identifier: then
+Keyword: then
 Identifier: S2
 Keyword: else
 Identifier: S3
