@@ -4,18 +4,19 @@
 
 %option noyywrap
 
-T_RES        ^(procedure|array|node|if|else|case|endcase|while|do|endwhile|repeat|until|loop|forever|for|endfor|input|output|call|return|stop|end|floor|ceil|log|goto)$
-T_ID         ^([a-zA-Z_][a-zA-Z0-9_]*)$
-T_UnaryOp    ^(not)$
-T_ExpoOp     ^(\^)$
-T_MDOp       ^(×|/|mod)$
-T_ASOp       ^(\+|-)$
-T_RelOp      ^(==|<|>|≤|≥)$
-T_LogicOp    ^(and|or)$
-T_AssignOp   ^(=)$
-T_Delim      ^([:;\(\)\[\]\{\}])$
-T_NumLit     ^-?(\d+(\.\d+)?)$
-T_StrLit     ^'(?:[^''\\]|\\.)*'|"(?:[^"\\]|\\.)*"$
+T_RES        (procedure|array|node|if|else|case|endcase|while|do|endwhile|repeat|until|loop|forever|for|endfor|input|output|call|return|stop|end|floor|ceil|log|goto)
+T_ID         ([a-zA-Z_][a-zA-Z0-9_]*)
+T_UnaryOp    (\bnot\b)
+T_ExpoOp     (\^)
+T_MDOp       (\*|\/|mod)
+T_ASOp       (\+|-)
+T_RelOp      (==|<|>|≤|≥)
+T_LogicOp    (\band\b|\bor\b)
+T_AssignOp   (=)
+T_Delim      ([:;\(\)\[\]\{\}])
+T_NumLit     (-?([0-9]+(\.[0-9]+)?))
+T_StrLitD    \"([^\"]|\\.)*?\"
+T_StrLitS    \'([^\']|\\.)*?\'
 
 %%
 
@@ -30,7 +31,8 @@ T_StrLit     ^'(?:[^''\\]|\\.)*'|"(?:[^"\\]|\\.)*"$
 {T_AssignOp} { printf("Assignment Operator: %s\n", yytext); }
 {T_Delim}    { printf("Delimiter: %s\n", yytext); }
 {T_NumLit}   { printf("Numeric Literal: %s\n", yytext); }
-{T_StrLit}   { printf("String Literal: %s\n", yytext); }
+{T_StrLitD}  { printf("String Literal: %s\n", yytext); }
+{T_StrLitS}  { printf("String Literal: %s\n", yytext); }
 
 [ \t\n]+      { /* Ignore whitespace, tab, and newline characters */ }
 .             { printf("Unrecognized character: %s\n", yytext); }

@@ -1,0 +1,19 @@
+variable = expression
+if cond1 then S1
+elseif cond2 then S2
+else S3
+
+while cond do
+S
+endwhile
+
+repeat
+S
+until cond
+
+case
+: cond1 : S1
+: cond2 : S2
+: cond3 : S3
+else : Sn
+endcase
