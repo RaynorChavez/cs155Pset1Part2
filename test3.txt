@@ -1,0 +1,14 @@
+not
+and
+or
+mod
+,
++
+-
+-3
+<=
+>=
+<
+>
+"strlitD"
+'strlitS'

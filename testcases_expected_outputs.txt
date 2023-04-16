@@ -1,0 +1,221 @@
+--------------------
+test1.txt
+--------------------
+
+procedure Example(x, y)
+array A[10]
+node N
+
+for i = 1 to 10
+  output A[i]
+endfor
+
+forever
+  input x
+  if x == -1
+    break
+  end
+end
+
+floor(4.5)
+ceil(2.6)
+log(100)
+
+x = 5 + (3 * 2)
+y = 5.5 / 2.0
+z = 5 mod 3
+
+if x > 0 and y < 10
+  z = x * y
+end
+
+----------------------
+Output:
+
+Keyword: procedure
+Identifier: Example
+Delimiter: (
+Identifier: x
+Delimiter: ,
+Identifier: y
+Delimiter: )
+Keyword: array
+Identifier: A
+Delimiter: [
+Numeric Literal: 10
+Delimiter: ]
+Keyword: node
+Identifier: N
+Keyword: for
+Identifier: i
+Assignment Operator: =
+Numeric Literal: 1
+Identifier: to
+Numeric Literal: 10
+Keyword: output
+Identifier: A
+Delimiter: [
+Identifier: i
+Delimiter: ]
+Keyword: endfor
+Keyword: forever
+Keyword: input
+Identifier: x
+Keyword: if
+Identifier: x
+Relational Operator: ==
+Numeric Literal: -1
+Identifier: break
+Keyword: end
+Keyword: end
+Keyword: floor
+Delimiter: (
+Numeric Literal: 4.5
+Delimiter: )
+Keyword: ceil
+Delimiter: (
+Numeric Literal: 2.6
+Delimiter: )
+Keyword: log
+Delimiter: (
+Numeric Literal: 100
+Delimiter: )
+Identifier: x
+Assignment Operator: =
+Numeric Literal: 5
+Addition or Subtraction Operator: +
+Delimiter: (
+Numeric Literal: 3
+Multiplication or Division Operator: *
+Numeric Literal: 2
+Delimiter: )
+Identifier: y
+Assignment Operator: =
+Numeric Literal: 5.5
+Multiplication or Division Operator: /
+Numeric Literal: 2.0
+Identifier: z
+Assignment Operator: =
+Numeric Literal: 5
+Multiplication or Division Operator: mod
+Numeric Literal: 3
+Keyword: if
+Identifier: x
+Relational Operator: >
+Numeric Literal: 0
+Logical Operator: and
+Identifier: y
+Relational Operator: <
+Numeric Literal: 10
+Identifier: z
+Assignment Operator: =
+Identifier: x
+Multiplication or Division Operator: *
+Identifier: y
+Keyword: end
+
+
+--------------------
+test2.txt
+--------------------
+
+variable = expression
+if cond1 then S1
+elseif cond2 then S2
+else S3
+
+while cond do
+S
+endwhile
+
+repeat
+S
+until cond
+
+case
+: cond1 : S1
+: cond2 : S2
+: cond3 : S3
+else : Sn
+endcase
+
+----------------------
+Output:
+
+Identifier: variable
+Assignment Operator: =
+Identifier: expression
+Keyword: if
+Identifier: cond1
+Identifier: then
+Identifier: S1
+Identifier: elseif
+Identifier: cond2
+Identifier: then
+Identifier: S2
+Keyword: else
+Identifier: S3
+Keyword: while
+Identifier: cond
+Keyword: do
+Identifier: S
+Keyword: endwhile
+Keyword: repeat
+Identifier: S
+Keyword: until
+Identifier: cond
+Keyword: case
+Delimiter: :
+Identifier: cond1
+Delimiter: :
+Identifier: S1
+Delimiter: :
+Identifier: cond2
+Delimiter: :
+Identifier: S2
+Delimiter: :
+Identifier: cond3
+Delimiter: :
+Identifier: S3
+Keyword: else
+Delimiter: :
+Identifier: Sn
+Keyword: endcase
+
+
+--------------------
+test3.txt
+--------------------
+
+not
+and
+or
+mod
+,
++
+-
+-3
+<=
+>=
+<
+>
+"strlitD"
+'strlitS'
+
+----------------------
+Output:
+
+Unary Operator: not
+Logical Operator: and
+Logical Operator: or
+Multiplication or Division Operator: mod
+Delimiter: ,
+Addition or Subtraction Operator: +
+Addition or Subtraction Operator: -
+Numeric Literal: -3
+Relational Operator: <=
+Relational Operator: >=
+Relational Operator: <
+Relational Operator: >
+String Literal: "strlitD"
+String Literal: 'strlitS'
